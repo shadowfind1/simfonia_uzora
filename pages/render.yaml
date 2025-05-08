@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: simfoniya-uzora
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
+    watchForFileChanges: true
