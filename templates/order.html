@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа - Симфония Узора</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com ">
+    <link rel="preconnect" href="https://fonts.gstatic.com " crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display :wght@400;500;600&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <div class="header__logo">
+                    <img src="/static/images/logo.png" alt="Симфония Узора">
+                    <span>Симфония Узора</span>
+                </div>
+                <nav class="nav">
+                    <a class="nav__link" href="index.html">На главную</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="section order-section">
+        <div class="container">
+            <h1 class="section__title">Оформление заказа</h1>
+            <p class="section__subtitle">Опишите ваш проект, и мы свяжемся с вами для уточнения деталей</p>
+            
+            <form action="/submit" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="name">Ваше имя*</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Телефон*</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="product">Тип изделия*</label>
+                    <select id="product" name="product" required>
+                        <option value="">Выберите тип изделия</option>
+                        <option value="screen">Ширма/Экран</option>
+                        <option value="frame">Рама/Карниз</option>
+                        <option value="decor">Элемент декора</option>
+                        <option value="souvenir">Сувенир</option>
+                        <option value="panel">3D панель</option>
+                        <option value="furniture">Мебель</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="material">Предпочтительный материал</label>
+                    <select id="material" name="material">
+                        <option value="">Не важно</option>
+                        <option value="wood">Дерево</option>
+                        <option value="mdf">МДФ</option>
+                        <option value="plywood">Фанера</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="size">Примерные размеры (см)</label>
+                    <input type="text" id="size" name="size" placeholder="Ширина x Высота x Глубина">
+                </div>
+                
+                <div class="form-group">
+                    <label for="design">Есть ли у вас дизайн/эскиз?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="design" value="yes"> Да, приложу файл</label>
+                        <label><input type="radio" name="design" value="no"> Нет, нужна помощь</label>
+                        <label><input type="radio" name="design" value="idea"> Есть идея, но нет эскиза</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="files">Прикрепить файлы (эскизы, фото)</label>
+                    <input type="file" id="files" name="files" multiple>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Подробное описание проекта*</label>
+                    <textarea id="description" name="description" rows="6" required placeholder="Опишите, что вы хотите заказать, предпочтительные стиль и цвет, где будет использоваться изделие, особые пожелания"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="deadline">Желаемый срок выполнения</label>
+                    <input type="date" id="deadline" name="deadline">
+                </div>
+                
+                <div class="form-group">
+                    <label for="budget">Примерный бюджет</label>
+                    <select id="budget" name="budget">
+                        <option value="">Не указан</option>
+                        <option value="10-30">10 000 - 30 000 руб.</option>
+                        <option value="30-50">30 000 - 50 000 руб.</option>
+                        <option value="50-100">50 000 - 100 000 руб.</option>
+                        <option value="100+">100 000+ руб.</option>
+                    </select>
+                </div>
+                
+                <div class="form-submit">
+                    <button type="submit" class="btn btn--large">Отправить заявку</button>
+                    <p class="form-notice">* Обязательные для заполнения поля</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <h3>Контакты</h3>
+                    <p><strong>Адрес:</strong> Свердловская обл., г. Нижний Тагил, ул. Орджоникидзе, 2 б корпус 2</p>
+                    <p><strong>Телефон:</strong> +7 (982) 608-02-77</p>
+                    <p><strong>E-mail:</strong> simuzor@sim-uzor.ru</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__copyright">© 2025 Симфония Узора.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
